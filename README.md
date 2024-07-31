@@ -1,4 +1,4 @@
-# Laravel VueJS Firebase CMS
+# BasicCMS-Vue
 
 ## Overview
 This project is a basic CMS (Content Management System) that uses Laravel for the backend and VueJS for the frontend. It utilizes Firebase for authentication, Firestore for the database, and Firebase Hosting for deployment.
