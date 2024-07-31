@@ -1,0 +1,10 @@
+/* src/assets/styles/variables.scss */
+$primary-color: #ffca09;
+$secondary-color: #f58220;
+$black-color: #000000;
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --black-color: #{$black-color};
+}

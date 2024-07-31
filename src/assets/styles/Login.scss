@@ -1,0 +1,36 @@
+@import './variables';
+
+.login {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.login h1 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.login button {
+  background-color: var(--primary-color);
+  color: var(--black-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.login button:hover {
+  background-color: var(--secondary-color);
+}

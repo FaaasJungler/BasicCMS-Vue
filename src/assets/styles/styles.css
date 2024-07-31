@@ -1,0 +1,98 @@
+/* src/assets/styles/styles.scss */
+/* src/assets/styles/variables.scss */
+:root {
+  --primary-color: #ffca09;
+  --secondary-color: #f58220;
+  --black-color: #000000;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 98%;
+  margin: 0 auto;
+  /*media queries for larger screens*/
+  /*media queries for larger screens*/
+  /*media queries for larger screens*/
+  /*media queries for larger screens*/
+}
+@media (min-width: 600px) {
+  .main-container {
+    width: 95%;
+  }
+}
+@media (min-width: 900px) {
+  .main-container {
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+@media (min-width: 2000px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--black-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin: 0.5em 0;
+  line-height: 1.2;
+}
+
+/* Form Elements */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5em 0;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--black-color);
+  border: none;
+  padding: 10px 20px;
+  margin: 0.5em 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--black-color);
+}
+
+/*# sourceMappingURL=styles.css.map */

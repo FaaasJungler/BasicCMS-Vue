@@ -1,0 +1,17 @@
+/* src/assets/styles/variables.scss */
+:root {
+  --primary-color: #ffca09;
+  --secondary-color: #f58220;
+  --black-color: #000000;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--black-color);
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=Footer.css.map */
