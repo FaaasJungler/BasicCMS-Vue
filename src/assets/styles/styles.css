@@ -10,32 +10,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
-  /*media queries for larger screens*/
-  /*media queries for larger screens*/
-  /*media queries for larger screens*/
-  /*media queries for larger screens*/
-}
-@media (min-width: 600px) {
-  .main-container {
-    width: 95%;
-  }
-}
-@media (min-width: 900px) {
-  .main-container {
-    width: 90%;
-  }
-}
-@media (min-width: 1200px) {
-  .main-container {
-    width: 90%;
-  }
-}
-@media (min-width: 2000px) {
-  .main-container {
-    width: 90%;
-  }
 }
 
 /* Global Styles */
