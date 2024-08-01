@@ -4,6 +4,7 @@ import App from './App.vue';
 import router from './router';
 import pinia from './store';
 import { initializeAuthObserver } from './store/userStore';
+import { useTranslationStore } from './store/translationStore';
 import './assets/styles/styles.scss';
 
 const app = createApp(App);
@@ -11,6 +12,9 @@ const app = createApp(App);
 app.use(pinia);
 app.use(router);
 
-initializeAuthObserver();
+const translationStore = useTranslationStore();
 
-app.mount('#app');
+initializeAuthObserver();
+translationStore.fetchTranslations().then(() => {
+    app.mount('#app');
+})

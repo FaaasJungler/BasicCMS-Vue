@@ -1,19 +1,26 @@
 <template>
   <div class="home">
-   <Header
-      title="Your Animated Text Goes Here"
-      subtitle="A brief description of your content"
-      buttonText="Get Started"
-   />
+    <Header
+        :title="translate('headerTitle')"
+        :subtitle="translate('headerSubtitle')"
+        :buttonText="translate('headerButtonText')"
+    />
   </div>
 </template>
 
-<script>
-import Header from "./Header.vue";
+<script setup>
+import { useTranslationStore } from '../store/translationStore';
+import { ref, watch } from 'vue';
+import Header from './Header.vue';
 
-export default {
-  name: 'Home',
-  components: {Header},
+const translationStore = useTranslationStore();
+
+const translate = (id) => {
+  return translationStore.translateString(id);
 };
+
+watch(() => translationStore.translations, () => {}, { immediate: true });
+
 </script>
+
 <style src="../assets/styles/Home.scss"></style>

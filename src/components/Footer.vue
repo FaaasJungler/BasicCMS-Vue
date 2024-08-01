@@ -1,10 +1,17 @@
 <template>
   <footer>
-    <p>&copy; quelques part durant une nuit de 2024 par Mathieu Castonguay</p>
+    <p>&copy; {{ translate('footerText') }}</p>
   </footer>
 </template>
 
 <script setup>
+import { useTranslationStore } from '../store/translationStore';
+
+const translationStore = useTranslationStore();
+
+const translate = (id) => {
+  return translationStore.translateString(id);
+};
 </script>
 
 <style src="../assets/styles/Footer.scss"></style>

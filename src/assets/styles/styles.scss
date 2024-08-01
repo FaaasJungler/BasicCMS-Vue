@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 input, select, textarea {
   width: 100%;
   padding: 10px;
-  margin: 0.5em 0;
+  margin: 0.5em;
   border: 1px solid var(--secondary-color);
   border-radius: 5px;
 }
@@ -48,6 +48,7 @@ button:hover {
   background-color: var(--secondary-color);
 }
 
+
 /* Tables */
 table {
   width: 100%;
@@ -59,10 +60,12 @@ th, td {
   padding: 10px;
   border: 1px solid var(--secondary-color);
   text-align: left;
+  input {
+    width: 70%;
+  }
 }
 
 th {
   background-color: var(--primary-color);
   color: var(--black-color);
 }
-

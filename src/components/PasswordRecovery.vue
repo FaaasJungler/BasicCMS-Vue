@@ -1,11 +1,15 @@
 <template>
-  <div class="home">
-    <h1>Password Recovery</h1>
+  <div class="password-recovery">
+    <h1>{{ translate('passwordRecoveryTitle') }}</h1>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'PasswordRecovery',
+<script setup>
+import { useTranslationStore } from '../store/translationStore';
+
+const translationStore = useTranslationStore();
+
+const translate = (id) => {
+  return translationStore.translateString(id);
 };
 </script>
