@@ -13,13 +13,44 @@ nav {
   background-color: var(--primary-color);
   padding: 10px;
 }
-
 nav a {
   color: var(--black-color);
   margin: 5px 0;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+}
+nav select {
+  width: 50%;
+  color: var(--black-color);
+  margin: 5px 0;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (min-width: 600px) {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+  nav select {
+    width: 30%;
+  }
+}
+@media (min-width: 768px) {
+  nav select {
+    width: 20%;
+  }
+}
+@media (min-width: 1024px) {
+  nav select {
+    width: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  nav select {
+    width: 5%;
+  }
 }
 
 nav a:hover {
@@ -33,10 +64,6 @@ nav a:hover {
 
 /* Media Queries for larger screens */
 @media (min-width: 600px) {
-  nav {
-    flex-direction: row;
-    justify-content: center;
-  }
   nav a {
     margin: 0 10px;
   }

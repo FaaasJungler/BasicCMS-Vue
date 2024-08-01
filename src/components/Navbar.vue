@@ -11,7 +11,6 @@
     <select @change="changeLanguage" v-model="currentLanguage">
       <option value="en">English</option>
       <option value="fr">Français</option>
-      <!-- Ajoutez d'autres langues si nécessaire -->
     </select>
 
     <Modal v-if="isLoginModalOpen" @close="isLoginModalOpen = false">
@@ -60,11 +59,9 @@ const changeLanguage = (event) => {
   const language = event.target.value;
   translationStore.setCurrentLanguage(language);
   currentLanguage.value = language;
-  // Recharger les traductions si nécessaire
   translationStore.fetchTranslations();
 }
 
-// Regarder les changements dans la langue actuelle et recharger les traductions
 watch(currentLanguage, () => {
   translationStore.fetchTranslations();
 });

@@ -7,15 +7,45 @@ nav {
   align-items: center;
   background-color: var(--primary-color);
   padding: 10px;
+  a {
+    color: var(--black-color);
+    margin: 5px 0;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  select{
+    width: 50%;
+    color: var(--black-color);
+    margin: 5px 0;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  @media (min-width: 600px) {
+    flex-direction: row;
+    justify-content: center;
+    select{
+        width: 30%;
+    }
+  }
+  @media (min-width: 768px) {
+    select{
+        width: 20%;
+    }
+  }
+    @media (min-width: 1024px) {
+        select{
+            width: 10%;
+        }
+    }
+  @media (min-width: 1200px) {
+    select{
+        width: 5%;
+    }
+  }
 }
 
-nav a {
-  color: var(--black-color);
-  margin: 5px 0;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-}
 
 nav a:hover {
   color: var(--secondary-color);
@@ -28,11 +58,6 @@ nav a:hover {
 
 /* Media Queries for larger screens */
 @media (min-width: 600px) {
-  nav {
-    flex-direction: row;
-    justify-content: center;
-  }
-
   nav a {
     margin: 0 10px;
   }
