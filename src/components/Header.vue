@@ -3,7 +3,7 @@
     <div class="hero-content">
       <h1 class="hero-title">{{ title }}</h1>
       <p class="hero-subtitle">{{ subtitle }}</p>
-      <a href="#" class="hero-button" @click.prevent="showCover">{{ buttonText }}</a>
+      <a v-if="!isTouchDevice" href="#" class="hero-button" @click.prevent="showCover">{{ buttonText }}</a>
     </div>
     <div v-if="coverVisible" class="cover" @mousemove="updateCursor">
       <div class="cursor-spot" :style="cursorStyle"></div>
@@ -16,6 +16,12 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { useTranslationStore } from '../store/translationStore';
+
+const isTouchDevice = ref(false);
+
+onMounted(() => {
+  isTouchDevice.value = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+});
 
 const props = defineProps({
   title: String,
