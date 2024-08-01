@@ -1,4 +1,4 @@
-<<template>
+<template>
   <header class="hero">
     <div class="hero-content">
       <h1 class="hero-title">{{ title }}</h1>
