@@ -3,13 +3,22 @@
     <div class="hero-content">
       <h1 class="hero-title">{{ title }}</h1>
       <p class="hero-subtitle">{{ subtitle }}</p>
-      <a v-if="!isTouchDevice" href="#" class="hero-button" @click.prevent="showCover">{{ buttonText }}</a>
+      <a v-if="!isTouchDevice" href="#" class="hero-button" @click.prevent="showCover">{{
+        buttonText
+      }}</a>
     </div>
     <div v-if="coverVisible" class="cover" @mousemove="updateCursor">
       <div class="cursor-spot" :style="cursorStyle"></div>
     </div>
-    <img v-if="coverVisible" @click="hideCover" class="close-button" :style="randomPositionStyle" src="/assets/images/judgment.png" alt="Close" />
-    <h2 v-if="coverVisible" class="disappointed" >{{ translate('disappointedGuy') }}</h2>
+    <img
+      v-if="coverVisible"
+      @click="hideCover"
+      class="close-button"
+      :style="randomPositionStyle"
+      src="/assets/images/judgment.png"
+      alt="Close"
+    />
+    <h2 v-if="coverVisible" class="disappointed">{{ translate('disappointedGuy') }}</h2>
   </header>
 </template>
 
@@ -26,7 +35,7 @@ onMounted(() => {
 const props = defineProps({
   title: String,
   subtitle: String,
-  buttonText: String
+  buttonText: String,
 });
 
 const translationStore = useTranslationStore();
@@ -72,7 +81,6 @@ const randomPositionStyle = computed(() => ({
   top: `${randomTop.value}vh`,
   left: `${randomLeft.value}vw`,
 }));
-
 </script>
 
 <style src="../assets/styles/Header.scss"></style>
